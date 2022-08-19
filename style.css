@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition-duration: 0.7s;
+}
+
+.body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    background-color: #F3F5FC;
+    background-size: cover;
+    padding: 20px 0;
+    perspective: 500px;
+}
+
+.main {
+    /*background-color: #fff;*/
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    padding: 8px;
+    min-height: 80vh;
+    width: 80vw;
+}
+
+.container textarea {
+    width: 100%;
+    height: 300px;
+    padding: 8px;
+    border: 0.5px solid #000;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: medium;
+}
+
+.container div {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.container div p {
+    font-size: 1rem;
+    margin-left: 5px;
+    opacity: 0.7;
+}
+
+button {
+    background: none;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 24px;
+    font-family: "montserrat",sans-serif;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    min-width: 200px;
+    margin: 5px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:hover{
+    color: greenyellow;
+    /* background: #000; */
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 24px;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+
+.button-secondary{
+    background: lightgray;   
+}
+
+#button-primary::before {
+    transform: scaleX(0);
+}
+
+#button-primary:hover::before {
+    transform: scaleX(1);
+}
+
+#button-secondary::before {
+    transform: scaleY(0);
+}
+
+#button-secondary:hover::before {
+    transform: scaleY(1);
+}
+
+#copy-button::before {
+    transform: scaleY(0);
+}
+
+#copy-button:hover::before {
+    transform: scaleY(1);
+}
+
+@media (min-width: 768px) {
+    .buttons {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+    } 
+
+    .body {
+        padding: 20px 0;
+    }
+}
+
+.container-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 32px;
+    text-align: center;
+    margin-top: 32px;
+    border-radius: 32px;
+}
+
+.container-result img {
+    width: 100%;
+    max-width: 300px;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.container-result img:hover {
+    animation: flipH 1s linear;
+}
+
+@keyframes flipH{
+    50%{
+        transform: rotateY(180deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+
+.container-result {
+    margin: 25px;
+}
+
+@media (min-width: 1440px) {
+    .main {
+        display: grid;
+        grid-template-areas: "text result"
+            "buttons  result";
+        grid-template-rows: 80% auto;
+        grid-template-columns: 65% auto;
+    }
+
+    .main section {
+        padding: 70px 0;
+    }
+
+    .main .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: text;
+        padding: 25px 100px 0 100px;
+    }
+
+    .container textarea {
+        height: 100%;
+    }
+
+    .buttons {
+        grid-area: buttons;
+    }
+
+    .buttons button {
+        margin: 0 10px;
+    }
+
+    .section-result {
+        grid-area: result;
+    }
+
+    .container-result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 400px;
+        height: 100%;
+        margin: auto;
+    }
+}
+
+.container-span{
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    text-align: center;
+    margin-top: 2px;
+    border-radius: 32px;
+}
+
+.contac-method {
+    width: 220px;
+    height: 140px;
+    display: inline-block;
+    background: #000;
+    margin: 10px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.contac-method i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 140px;
+    background: #34495e;
+    z-index: 1;
+    transition: transform 0.6s;
+}
+
+.contac-method span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+}
+
+.contac-method:hover i{
+    transform: translateY(-50px);
+}
+
+.contac-method span a{
+    color: #fff;
+}

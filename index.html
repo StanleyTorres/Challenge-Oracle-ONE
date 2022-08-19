@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de texto Challenge 1 Alura</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <section class="body">
+            <div class="logo">
+                <img src="imagenes\Logo.png" alt="">
+            </div>
+            <main class="main">
+                <section class="container">
+                    <textarea name="text" id="textInput" cols="70" rows="20" placeholder="Ingrese el texto que desea encriptar o el codigo que desea desencriptar" onkeypress="return validation(event);"required></textarea>
+                    <div>
+                        <img src="imagenes\Vector.png" alt="warning">
+                        <p>Solo debe ingresar letras minúsculas y sin acentos.</p>
+                    </div>
+                </section>
+                <section class="buttons">
+                    <button class="button-primary" id="button-primary">
+                        <p>Encriptar</p>
+                    </button>
+                    <button class="button-primary" id="button-secondary">
+                        <p>Desencriptar</p>
+                    </button>
+                </section>
+                <section class="section-result">
+                    <div class="container-result">
+                        <img src="imagenes\Muñeco.png" alt="buscador">
+                        <h2 class="result-title" id="resultTitle">Ningún mensaje fue encontrado</h2>
+                        <p class="text-result" id="resultInput">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        <button class="button-secondary" id="copy-button">Copiar</button>
+                    </div>
+                </section>
+                <footer>
+                    <div class="container-span">
+                        <div class="contac-method">
+                            <i class="fa fa-linkedin-square fa-4x" aria-hidden="true"></i>
+                            <span> <a href="http://www.linkedin.com/in/stanley-torres">Linkedin</a></span>
+                        </div>
+                        <div class="contac-method">
+                            <i class="fa fa-github fa-4x" aria-hidden="true"></i>
+                            <span> <a href="https://github.com/StanleyTorres">Github</a> </span>
+                        </div>
+                        <div class="contac-method">
+                            <i class="fa fa-address-card fa-4x" aria-hidden="true"></i>
+                            <span>Creado por: <br>William Stanley Garcia Torres</span>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </section>
+        <script src="main.js"></script>
+    </body>
+</html>
