@@ -134,6 +134,7 @@ button::before{
     text-align: center;
     margin-top: 32px;
     border-radius: 32px;
+    box-shadow: 15px 15px 10px rgb(50 50 50 / 50%)
 }
 
 .container-result img {
