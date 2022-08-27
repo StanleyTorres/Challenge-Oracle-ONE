@@ -1,9 +1,9 @@
-var textInput = document.getElementById('textInput')
-var resultTitle = document.getElementById('resultTitle')
-var resultInput = document.getElementById('resultInput')
-var primaryButton = document.getElementById('button-primary')
-var secondaryButton = document.getElementById('button-secondary')
-var copyButton = document.getElementById('copy-button')
+let textInput = document.getElementById('textInput')
+let resultTitle = document.getElementById('resultTitle')
+let resultInput = document.getElementById('resultInput')
+let primaryButton = document.getElementById('button-primary')
+let secondaryButton = document.getElementById('button-secondary')
+let copyButton = document.getElementById('copy-button')
 
 
 function validation(e) {
@@ -15,7 +15,7 @@ function validation(e) {
         return true
     }
     if(pattern.test(allow_key) == false){
-        alert("Solo debe ingresar letras minúsculas y sin acentos")
+        alert("¡Error al ingresar datos!, Solo debe ingresar letras minúsculas y sin acentos, un error mas y el dispositivo explotara.")
         location.reload();
     }
     return 
